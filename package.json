@@ -1,0 +1,39 @@
+{
+  "name": "imooc",
+  "version": "0.0.1",
+  "description": "i mooc movie",
+  "main": "app.js",
+  "dependencies": {
+    "bcrypt": "^1.0.3",
+    "body-parser": "^1.18.2",
+    "bower": "^1.8.2",
+    "connect-mongo": "^2.0.1",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "express-session": "^1.15.6",
+    "grunt": "^1.0.1",
+    "grunt-concurrent": "^2.3.1",
+    "jade": "^1.11.0",
+    "md5": "^2.2.1",
+    "moment": "^2.20.1",
+    "mongoose": "^5.0.2",
+    "morgan": "^1.9.0",
+    "path": "^0.12.7",
+    "serve-static": "^1.13.1",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "grunt-contrib-nodemon": "^0.5.4",
+    "grunt-contrib-watch": "^1.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "i",
+    "mooc",
+    "movie"
+  ],
+  "author": "yjb",
+  "license": "ISC"
+}
