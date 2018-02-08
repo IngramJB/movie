@@ -1,5 +1,6 @@
 var Movie=require('../models/movie.js');
 var User=require('../models/user.js');
+console.log(User+'111');
 var _=require('underscore');
 module.exports=function(app){
 // index
@@ -17,7 +18,7 @@ app.get('/',function(req,res){
   })
 })
 // signup
-app.post('/user/signup',function(req,res){
+app.post('/user/signup',function(req,res){ 
   var _user=req.body.user;
   User.findOne({name:_user.name},function(err,user){
     if(err){

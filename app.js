@@ -23,13 +23,16 @@ app.use(session({
     	collection:'sessions'
     })
 }));
+// 判断环境
 if('development'===app.get('env')){
-	app.set('showStackErrer',true)
-	app.use(logger(':method :url :status'))
+	// 打印错误
+	app.set('showStackErrer',true);
+	app.use(logger(':method :url :status'));
+	// 排版美观
 	app.locals.pretty=true;
 	mongoose.set('debug',true);
 }
-require('./config/router')(app);
+
 app.use(bodyParser.urlencoded({extended:true}));
 // app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use(serveStatic('public'));
@@ -42,6 +45,6 @@ app.use(function(req,res,next){
 		if(_user){
 			app.locals.user=_user;
 		}
-
 		return next();
 })
+require('./config/router')(app);
